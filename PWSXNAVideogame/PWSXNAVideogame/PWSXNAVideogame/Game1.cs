@@ -18,6 +18,9 @@ namespace PWSXNAVideogame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private Texture2D background;
+        private Texture2D player;
+        private Texture2D enemy;
 
         public Game1()
         {
@@ -47,7 +50,9 @@ namespace PWSXNAVideogame
             
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            // TODO: use this.Content to load your game content here
+            background = Content.Load<Texture2D>("art/Backgrounds/bg_castle");
+            player = Content.Load<Texture2D>("art/Sprites/Player/p1_front"); 
+            enemy = Content.Load<Texture2D>("art/Sprites/Enemies/blockerBody");
         }
 
         /// <summary>
@@ -83,7 +88,13 @@ namespace PWSXNAVideogame
         {
             GraphicsDevice.Clear(Color.PapayaWhip);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+
+            spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.White);
+            spriteBatch.Draw(enemy, new Vector2(400, 240), Color.White);
+            spriteBatch.Draw(player, new Vector2(300, 420), Color.White);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

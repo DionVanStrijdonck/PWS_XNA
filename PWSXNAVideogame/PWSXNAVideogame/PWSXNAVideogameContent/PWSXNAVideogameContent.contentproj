@@ -42,10 +42,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="art\Backgrounds\" />
     <Folder Include="art\Fonts\" />
     <Folder Include="art\GUI\" />
-    <Folder Include="art\Sprites\" />
     <Folder Include="art\Tiles\" />
     <Folder Include="art\VFX\" />
     <Folder Include="audio\Music\" />
@@ -55,6 +53,27 @@
   <ItemGroup>
     <Compile Include="art\Other\ShadesLogo.png">
       <Name>ShadesLogo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="art\Backgrounds\bg_castle.png">
+      <Name>bg_castle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="art\Sprites\Enemies\blockerBody.png">
+      <Name>blockerBody</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="art\Sprites\Player\p1_front.png">
+      <Name>p1_front</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
